@@ -1,13 +1,40 @@
-html {
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+@font-face {
+  font-family: Orbitron;
+  src: url(fonts/Orbitron-Bold.ttf);
 }
+
+/* mobile resolution changes */
+@media only screen and (max-width: 600px) {
+  html{
+    font-size: medium;
+  }
+  header{
+    grid-column: 2/12 !important;
+  }
+  #aboutme {
+    grid-column: 2/12 !important;
+  }
+  #projects {
+    grid-column: 2/12 !important;
+  }
+  #work_history {
+    grid-column: 2/12 !important;
+  }
+}
+
+html {
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+
 canvas {
   position: fixed;
   top: 0;
   left: 0;
 }
 
-main {
+#section-container {
   position: absolute;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -15,44 +42,62 @@ main {
 
 header{
   color: white;
-  background-color: rgb(30,144,255,0.7);
+  background-color: rgb(30,144,255,0.9);
+  background: linear-gradient(0deg, rgb(30, 188, 245) 0%, rgba(30,118,255,1) 100%);
   grid-column: 2/8;
   text-align: center;
   margin-top: 10%;
+  padding: 5%;
+  border-radius: 25px;
+}
+#the_boi{
+  font-family: Orbitron;
+  font-size: 60px;
+  color: black;
+  text-decoration: underline;
+  letter-spacing: .1rem;
+  word-spacing: .2rem;
 }
 
-h2, h3, h4, p, .tech_stack{
-  font-family:Arial, Helvetica, sans-serif;
-  font-weight: 700;
+#aboutme {
+  grid-column: 2/8;
+}
+#aboutme_content{
+  padding-bottom: 1rem;
 }
 
+section{
+  line-height: 2;
+  padding: 1rem;
+  padding-top: 0rem;
+  margin-top: 10%;
+  color: white;
+  background-color: rgba(77, 83, 109, 0.9);
+  border-radius: 25px;
+}
+.section_header{
+  text-decoration: underline;
+  text-align: center;
+}
+.section_item{
+  border: 5px ridge rgba(255, 255, 255, .3);
+  padding: 1rem;
+  margin: 5rem auto;
+}
+.section_item_top{
+  margin-top: 1rem;
+}
+.section_item_title{
+  text-align: center;
+}
 .tech_stack_list {
   columns: 2;
   -webkit-columns: 2;
   -moz-columns: 2;
 }
 
-section{
-  line-height: 2;
-  padding: 1rem;
-  margin: 10%;
-  color: white;
-  background-color: rgba(0,0,0, 0.7);
-}
-.section_header{
-  text-decoration: underline;
-}
-.section_item{
-  border: 1px ridge rgba(255, 255, 255, .5);
-  padding: 1rem;
-  margin: 1rem;
-}
-
-#aboutme {
-  grid-column: 2/8;
-}
 #projects {
-  grid-column: 7/12;
+  grid-column: 2/8;
 }
 #work_history {
   grid-column: 2/8;
