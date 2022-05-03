@@ -4,6 +4,7 @@ import './style.css'
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { BoxBufferGeometry, BoxGeometry, MeshBasicMaterial } from 'three';
 
 
 // Always need 3 things: Scene, Camera, Renderer
@@ -25,7 +26,7 @@ const renderer = new THREE.WebGL1Renderer({
 renderer.setPixelRatio(window.devicePixelRatio);
 //makes a full screen canvas
 renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setClearColor(0x000d24, 1);
+renderer.setClearColor(0x1c1d25, 1);
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap; // default THREE.PCFShadowMap
 renderer.antialias = true;
@@ -42,14 +43,14 @@ gltfLoader.path = 'models/'
 //*********************** */
 //*********************** */
 
-function front_box_material(front, side) {
+function front_box_material(front) {
   return [
-    new THREE.MeshBasicMaterial({ map: textureLoader.load(side) }),
-    new THREE.MeshBasicMaterial({ map: textureLoader.load(side) }),
-    new THREE.MeshBasicMaterial({ map: textureLoader.load(side) }),
-    new THREE.MeshBasicMaterial({ map: textureLoader.load(side) }),
+    new THREE.MeshBasicMaterial({ color: 0x000000 }),
+    new THREE.MeshBasicMaterial({ color: 0x000000 }),
+    new THREE.MeshBasicMaterial({ color: 0x000000 }),
+    new THREE.MeshBasicMaterial({ color: 0x000000 }),
     new THREE.MeshBasicMaterial({ map: textureLoader.load(front) }),
-    new THREE.MeshBasicMaterial({ map: textureLoader.load(side) }),
+    new THREE.MeshBasicMaterial({ color: 0x000000 }),
   ]
 }
 
@@ -57,7 +58,7 @@ function front_box_material(front, side) {
 const joeTexture = textureLoader.load('images/joe.jpg');
 const joe = new THREE.Mesh(
   new THREE.BoxGeometry(4, 4, 0.5),
-  front_box_material('images/joe.jpg', 'images/black.png')
+  front_box_material('images/joe.jpg')
 )
 joe.position.set(5, 20, -6);
 joe.rotation.y -= 0.5;
@@ -66,7 +67,7 @@ scene.add(joe);
 // keeb object
 const keeb = new THREE.Mesh(
   new THREE.BoxGeometry(18, 7, 0.2),
-  front_box_material('images/laser.png', 'images/black.png')
+  front_box_material('images/laser.png')
 )
 keeb.scale.set(0.25, 0.25, 1)
 keeb.position.set(5, 11.5, -6);
@@ -76,7 +77,7 @@ scene.add(keeb);
 
 // Strike Gundam object
 var gundam;
-const model_glass_case_position = [4.5,5,-6]
+const model_glass_case_position = [4.5,5.5,-6]
 gltfLoader.load('strike_gundam_posed.glb', function (gltf) {
   const model = gltf.scene;
   model.traverse(function (node) {
@@ -167,6 +168,21 @@ gltfLoader.load('phone.glb', function(gltf) {
   phone = model;
 });
 
+var pnnlLogo = new THREE.Mesh(
+  new BoxGeometry(2.5,2.5,.2),
+  front_box_material('images/pnnl.png')
+)
+pnnlLogo.position.set(5, -3, -6)
+pnnlLogo.rotation.y -= 0.5
+scene.add(pnnlLogo)
+
+var chicoState = new THREE.Mesh(
+  new BoxGeometry(3,3,.2),
+  front_box_material('images/chicostate.jpg')
+)
+chicoState.position.set(5, -9, -6)
+chicoState.rotation.y -= 0.5
+scene.add(chicoState)
 
 //*************************** */
 //*************************** */
@@ -231,6 +247,8 @@ function animate() {
   if(caseBase) { hover_animation(caseBase) }
   if(gundam) { hover_animation(gundam) }
   if(phone) { hover_animation(phone)}
+  if(pnnlLogo) { hover_animation(pnnlLogo)}
+  if(chicoState) { hover_animation(chicoState)}
   renderer.render(scene, camera);
 }
 animate();

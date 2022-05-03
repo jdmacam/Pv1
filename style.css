@@ -25,6 +25,7 @@
 html {
   font-family:Arial, Helvetica, sans-serif;
   font-weight: 700;
+  letter-spacing: 0.03rem;
 }
 
 
@@ -46,7 +47,7 @@ header{
   background: linear-gradient(0deg, rgb(30, 188, 245) 0%, rgba(30,118,255,1) 100%);
   grid-column: 2/8;
   text-align: center;
-  margin-top: 10%;
+  margin-top: 6%;
   padding: 5%;
   border-radius: 25px;
 }
@@ -63,14 +64,14 @@ header{
   grid-column: 2/8;
 }
 #aboutme_content{
-  padding-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 section{
   line-height: 2;
   padding: 1rem;
   padding-top: 0rem;
-  margin-top: 10%;
+  margin-top: 4%;
   color: white;
   background-color: rgba(77, 83, 109, 0.9);
   border-radius: 25px;
@@ -81,8 +82,9 @@ section{
 }
 .section_item{
   border: 5px ridge rgba(255, 255, 255, .3);
+  background-color: rgba(0, 0, 0, .4);
   padding: 1rem;
-  margin: 5rem auto;
+  margin: 1rem auto 5rem;
 }
 .section_item_top{
   margin-top: 1rem;
@@ -102,4 +104,6 @@ section{
 #work_history {
   grid-column: 2/8;
 }
-
+.job-title{
+  text-decoration: underline;
+}
