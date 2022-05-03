@@ -26,7 +26,7 @@ const renderer = new THREE.WebGL1Renderer({
 renderer.setPixelRatio(window.devicePixelRatio);
 //makes a full screen canvas
 renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setClearColor(0x1c1d25, 1);
+renderer.setClearColor(0x1B2631, 1);
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap; // default THREE.PCFShadowMap
 renderer.antialias = true;
@@ -172,7 +172,7 @@ var pnnlLogo = new THREE.Mesh(
   new BoxGeometry(2.5,2.5,.2),
   front_box_material('images/pnnl.png')
 )
-pnnlLogo.position.set(5, -3, -6)
+pnnlLogo.position.set(5, -4, -6)
 pnnlLogo.rotation.y -= 0.5
 scene.add(pnnlLogo)
 
@@ -180,9 +180,17 @@ var chicoState = new THREE.Mesh(
   new BoxGeometry(3,3,.2),
   front_box_material('images/chicostate.jpg')
 )
-chicoState.position.set(5, -9, -6)
+chicoState.position.set(5, -10, -6)
 chicoState.rotation.y -= 0.5
 scene.add(chicoState)
+
+var grad = new THREE.Mesh(
+  new BoxGeometry(3,4.2,.2),
+  front_box_material('images/grad.jpg')
+)
+grad.position.set(5, -18.5, -6)
+grad.rotation.y -= 0.5
+scene.add(grad)
 
 //*************************** */
 //*************************** */
@@ -249,6 +257,7 @@ function animate() {
   if(phone) { hover_animation(phone)}
   if(pnnlLogo) { hover_animation(pnnlLogo)}
   if(chicoState) { hover_animation(chicoState)}
+  if(grad) { hover_animation(grad)}
   renderer.render(scene, camera);
 }
 animate();
