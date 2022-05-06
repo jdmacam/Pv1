@@ -2,9 +2,7 @@ import './style.css'
 
 // Libraries
 import * as THREE from 'https://unpkg.com/three@0.138.0/build/three.module.js';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import { GLTFLoader } from 'https://unpkg.com/three@0.138.0/examples/jsm/controls/OrbitControls.js';
-import { BoxBufferGeometry, BoxGeometry, MeshBasicMaterial } from 'three';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 
 // Always need 3 things: Scene, Camera, Renderer
