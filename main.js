@@ -251,7 +251,7 @@ function animate() {
   if(glassCase) { hover_animation(glassCase) }
   if(caseBase) { hover_animation(caseBase) }
   if(gundam) { hover_animation(gundam) }
-  if(phone) { hover_animation(phone)}
+  // if(phone) { hover_animation(phone)}
   if(pnnlLogo) { hover_animation(pnnlLogo)}
   if(chicoState) { hover_animation(chicoState)}
   if(grad) { hover_animation(grad)}
