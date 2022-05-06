@@ -59,7 +59,7 @@ const joe = new THREE.Mesh(
 )
 joe.position.set(5, 20, -6);
 joe.rotation.y -= 0.5;
-scene.add(joe);
+// scene.add(joe);
 
 // keeb object
 const keeb = new THREE.Mesh(
@@ -70,7 +70,7 @@ keeb.scale.set(0.25, 0.25, 1)
 keeb.position.set(5, 11.5, -6);
 keeb.rotation.x -= 0.5;
 keeb.rotation.y -= 0.5;
-scene.add(keeb);
+// scene.add(keeb);
 
 // Strike Gundam object
 var gundam;
@@ -134,7 +134,7 @@ glassCase.position.set(
   0 + model_glass_case_position[2]
 );
 glassCase.receiveShadow = true;
-scene.add(glassCase);
+// scene.add(glassCase);
 
 // Gundam glass case base
 const caseBase = new THREE.Mesh(
@@ -150,7 +150,7 @@ caseBase.position.set(
   0 + model_glass_case_position[2]
   );
 caseBase.receiveShadow = true;
-scene.add(caseBase);
+// scene.add(caseBase);
 
 // var phone;
 // gltfLoader.load('phone.glb', function(gltf) {
@@ -171,7 +171,7 @@ var pnnlLogo = new THREE.Mesh(
 )
 pnnlLogo.position.set(5, -4, -6)
 pnnlLogo.rotation.y -= 0.5
-scene.add(pnnlLogo)
+// scene.add(pnnlLogo)
 
 var chicoState = new THREE.Mesh(
   new BoxGeometry(3,3,.2),
@@ -179,7 +179,7 @@ var chicoState = new THREE.Mesh(
 )
 chicoState.position.set(5, -10, -6)
 chicoState.rotation.y -= 0.5
-scene.add(chicoState)
+// scene.add(chicoState)
 
 var grad = new THREE.Mesh(
   new BoxGeometry(3,4.2,.2),
@@ -187,7 +187,7 @@ var grad = new THREE.Mesh(
 )
 grad.position.set(5, -18.5, -6)
 grad.rotation.y -= 0.5
-scene.add(grad)
+// scene.add(grad)
 
 //*************************** */
 //*************************** */
@@ -246,6 +246,28 @@ function animate() {
   // and assigned to its respective variable at the first animation loop, so we need to first check if it exists
   // before we attempt to do any animating on it
   requestAnimationFrame(animate);
+  if(window.innerWidth >= 600){
+    scene.add(joe);
+    scene.add(keeb);
+    scene.add(glassCase);
+    scene.add(caseBase);
+    scene.add(gundam);
+    scene.add(pnnlLogo);
+    scene.add(chicoState);
+    scene.add(grad);
+    // console.log(window.innerWidth + ' adding')
+  }
+  else{
+    scene.remove(joe);
+    scene.remove(keeb);
+    scene.remove(glassCase);
+    scene.remove(caseBase);
+    scene.remove(gundam);
+    scene.remove(pnnlLogo);
+    scene.remove(chicoState);
+    scene.remove(grad);
+    // console.log(window.innerWidth + ' removing')
+  }
   if(joe) { hover_animation(joe) }
   if(keeb) { hover_animation(keeb) }
   if(glassCase) { hover_animation(glassCase) }
@@ -268,6 +290,7 @@ animate();
 // window resize
 window.addEventListener('resize', on_window_resize, false);
 function on_window_resize() {
+  console.log(window.innerWidth)
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
