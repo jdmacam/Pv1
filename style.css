@@ -9,7 +9,8 @@
     font-size: medium;
   }
   .sidebar{
-    overflow:scroll;
+    position:absolute !important;
+    line-height: 0.2rem;
   }
   header{
     grid-column: 2/12 !important;
@@ -66,18 +67,27 @@ canvas {
   overflow: hidden;
   background-color: black;
   z-index: 1;
+  border: 3px ridge rgba(255, 255, 255, .3);
 }
 .sidebar-item {
   float: left;
+  font-size: large;
+  list-style: none;
 }
-
 .sidebar-item .sidebar-link {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 12px 14px 16px;
   text-decoration: none;
 }
+/* #initials{
+  float:right;
+  float: top;
+  color:rgba(30,118,255,1);
+  transform: translateY(-13%);
+  padding-right: 2%;
+} */
 
 #section-container {
   position: absolute;
