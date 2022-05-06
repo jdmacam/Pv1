@@ -152,18 +152,18 @@ caseBase.position.set(
 caseBase.receiveShadow = true;
 scene.add(caseBase);
 
-var phone;
-gltfLoader.load('phone.glb', function(gltf) {
-  var model = gltf.scene;
-  var scl = 20
-  model.scale.set(scl, scl, scl)
-  model.rotation.x = 1.4;
-  model.rotation.y = 0;
-  model.rotation.z = .9;
-  model.position.set(5,1.6,-6)
-  scene.add(model);
-  phone = model;
-});
+// var phone;
+// gltfLoader.load('phone.glb', function(gltf) {
+//   var model = gltf.scene;
+//   var scl = 20
+//   model.scale.set(scl, scl, scl)
+//   model.rotation.x = 1.4;
+//   model.rotation.y = 0;
+//   model.rotation.z = .9;
+//   model.position.set(5,1.6,-6)
+//   scene.add(model);
+//   phone = model;
+// });
 
 var pnnlLogo = new THREE.Mesh(
   new BoxGeometry(2.5,2.5,.2),
