@@ -87,7 +87,7 @@ canvas {
 .model{
   position: relative;
   float: right;
-  border-style: double;
+  /* border-style: double; */
   grid-column: 8/13;
 }
 #project-models #work-history-models{
