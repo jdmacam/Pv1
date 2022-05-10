@@ -76,6 +76,10 @@ html {
   background-color: #1B2631;
 }
 
+a{
+  color: white;
+}
+
 canvas {
   position: fixed;
   top: 0;
