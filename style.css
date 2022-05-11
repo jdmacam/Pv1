@@ -8,6 +8,9 @@
   html{
     font-size: medium;
   }
+  .model{
+    display: none !important;
+  }
   .sidebar{
     position:absolute !important;
     line-height: 0.2rem;
@@ -16,8 +19,20 @@
     grid-column: 2/12 !important;
     margin-top: 40% !important;
   }
+  #the_boi{
+    font-size: 30px !important;
+  }
   #aboutme {
     grid-column: 2/12 !important;
+  }
+  #portrait-image-container{
+    grid-column: 2/12 !important;
+    grid-row-start: 2 !important;
+  }
+  #portrait-image{
+    padding-top: 0rem !important;
+    margin-top: 4% !important;
+    max-width: 100% !important;
   }
   #projects {
     grid-column: 2/12 !important;
@@ -37,6 +52,15 @@
     padding-right: 3rem;
     border-radius: 50%;
   }
+  #grad-image-container{
+    grid-column: 2/12 !important;
+    grid-row-start: 7 !important;
+  }
+  #grad-image{
+    padding-top: 0rem !important;
+    margin-top: 4% !important;
+    max-width: 100% !important;
+  }
   #contact{
     grid-column: 2/12 !important;
   }
@@ -49,14 +73,34 @@ html {
   font-family:Arial, Helvetica, sans-serif;
   font-weight: 700;
   letter-spacing: 0.03rem;
+  background-color: #1B2631;
 }
 
+a{
+  color: white;
+}
 
 canvas {
   position: fixed;
   top: 0;
   left: 0;
+  
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
+
+/* 2nd column grid */
+.model{
+  position: relative;
+  float: right;
+  /* border-style: double; */
+  grid-column: 8/13;
+}
+#project-models #work-history-models{
+  grid-row: auto;
+}
+
 
 .sidebar{
   width: 100%;
@@ -81,18 +125,13 @@ canvas {
   padding: 12px 14px 16px;
   text-decoration: none;
 }
-/* #initials{
-  float:right;
-  float: top;
-  color:rgba(30,118,255,1);
-  transform: translateY(-13%);
-  padding-right: 2%;
-} */
+
 
 #section-container {
   position: absolute;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: rereat(12, 1fr);
 }
 
 header{
@@ -112,6 +151,23 @@ header{
   text-decoration: underline;
   letter-spacing: .1rem;
   word-spacing: .2rem;
+}
+
+#portrait-image-container{
+  position: relative;
+  float: right;
+  /* border-style: double; */
+  grid-column: 8/13;
+  grid-row: 1/3;
+  overflow: hidden;
+}
+#portrait-image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 25%;
+
+  max-width: 35rem;
 }
 
 #aboutme {
@@ -160,8 +216,6 @@ section{
 #work_history {
   grid-column: 2/8;
 }
-.job-header{
-}
 .job-title{
   text-decoration: underline;
 }
@@ -180,6 +234,23 @@ section{
 .school-details{
   text-align: center;
   margin: 4rem auto;
+}
+
+#grad-image-container{
+  position: relative;
+  float: right;
+  /* border-style: double; */
+  grid-column: 8/13;
+  overflow: hidden;
+}
+#grad-image{
+  display: block;
+  margin: 7% auto 0%;
+  /* margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%; */
+
+  max-width: 30rem;
 }
 
 #contact{

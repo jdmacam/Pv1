@@ -6,6 +6,7 @@
   <link rel="icon" type="image/svg+xml" href="images/favicon.ico" />
   <link rel="stylesheet" type="text/css" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/c2aee1706b.js" crossorigin="anonymous"></script>
   <title>Joe Macam's Precious Little Portfolio</title>
 </head>
 
@@ -17,10 +18,10 @@
     <div class="sidebar">
       <ul class="sidebar-list">
         <li class="sidebar-item"><a class="sidebar-link" href="#">About</a></li>
-        <li class="sidebar-item"><a class="sidebar-link"  href="#projects">Projects</a></li>
-        <li class="sidebar-item"><a class="sidebar-link"  href="#work_history">Work History</a></li>
-        <li class="sidebar-item"><a class="sidebar-link"  href="#education">Education</a></li>
-        <li class="sidebar-item"><a class="sidebar-link"  href="#contact">Contact</a></li>
+        <li class="sidebar-item"><a class="sidebar-link" href="#projects">Projects</a></li>
+        <li class="sidebar-item"><a class="sidebar-link" href="#work_history">Work History</a></li>
+        <li class="sidebar-item"><a class="sidebar-link" href="#education">Education</a></li>
+        <li class="sidebar-item"><a class="sidebar-link" href="#contact">Contact</a></li>
       </ul>
       <!-- <h2 id="initials">JM</h2> -->
     </div>
@@ -33,17 +34,24 @@
         <p> Welcome! 😀</p>
       </header>
 
+      <span id="portrait-image-container">
+        <img src="images/joe.jpg" id="portrait-image">
+      </span>
+
       <section id="aboutme" class="section_area">
         <h2 class="section_header">About Me</h2>
         <p class="section_item" id="aboutme_content">
-          I am a recent Chico State graduate who received my B.S. in Computer Science in the Fall of 2021. I have
+          I am a recent Chico State graduate who received my B.S. in Computer Science in the Fall of 2021. I
+          have
           experience programming a multitude of different fields and technologies through
-          course work and self study, from full-stack web development to parallel programming with shared and
-          distributed memory. My diverse background across different problem domains make me an adept problem solver and
+          course work and self study, from web development to parallel programming with shared and
+          distributed memory. My diverse background across different problem domains make me an adept problem
+          solver and
           highly capable programmer.
           <br><br>
           I am currently a Post Bachelor Research Associate at Pacific Northwest National Laboratory in the
-          HPC/ML/Quantum group studying high performance parallel programming methodologies and working on the RC:
+          HPC/ML/Quantum group studying high performance parallel programming methodologies and working on the
+          RC:
           Capabilities Monitoring Project for the HPC Deception platform.
         </p>
       </section>
@@ -66,11 +74,18 @@
             <li> Django </li>
             <li> Foundation 6 </li>
             <li> Python </li>
-            <li> Keras/TensorFlow </li>
+            <li> Keras </li>
+            <li> TensorFlow </li>
             <li> HTML </li>
             <li> CSS </li>
             <li> Google Cloud Platform </li>
           </ul>
+          <hr>
+          <div style="text-align: center;">
+            <a href="https://github.com/jdmacam/keycap-vision" target="_blank">
+              <i class="fa-brands fa-github fa-3x"></i>
+            </a>
+          </div>
         </div>
 
 
@@ -91,6 +106,12 @@
             <li> CSS </li>
             <li> Google Cloud Platform </li>
           </ul>
+          <hr>
+          <div style="text-align: center;">
+            <a href="https://github.com/jdmacam/gunpla-station" target="_blank">
+              <i class="fa-brands fa-github fa-3x"></i>
+            </a>
+          </div>
         </div>
 
         <div class="section_item section_item_top">
@@ -98,8 +119,10 @@
           <h3> CSCI 430 Software Engineering Group Project </h3>
           <hr>
           <p>
-            A social media mobile app written in Flutter catered towards families. This project was as semester long
-            software engineering simulation, including User Stories, Kanban Boards, Weekly Scrums and Sprints
+            A social media mobile app written in Flutter catered towards families. This project was as
+            semester long
+            software engineering simulation, including User Stories, Kanban Boards, Weekly Scrums and
+            Sprints
 
           </p>
           <ul class="tech_stack_list">
@@ -108,9 +131,18 @@
             <li> Android Studio </li>
             <li> Google Firebase </li>
           </ul>
+          <hr>
+          <div style="text-align: center;">
+            <a href="https://github.com/ChicoState/FamNet" target="_blank">
+              <i class="fa-brands fa-github fa-3x"></i>
+            </a>
+          </div>
         </div>
 
       </section>
+
+      <span id="project-models" class="model"></span>
+
       <br>
 
       <section id="work_history" class="section_area">
@@ -126,7 +158,8 @@
           <p>
           <ul>
             <li> Profiled IOPS metrics of the Deception supercomputer using Grafana for RCCM project. </li>
-            <li> Studied shared memory parallel programming methodologies on the Deception supercomputer. </li>
+            <li> Studied shared memory parallel programming methodologies on the Deception supercomputer.
+            </li>
           </ul>
           </p>
         </div>
@@ -140,7 +173,8 @@
             <hr>
           </div>
           <p>
-            Tutored and assisted students in a variety of Computer Science courses such as Web Programming Fundamentals,
+            Tutored and assisted students in a variety of Computer Science courses such as Web Programming
+            Fundamentals,
             Algorithms and Data Structures, Compilers, and Intro to Computer Networks.
           </p>
         </div>
@@ -154,12 +188,17 @@
           </div>
           <hr>
           <p>
-            Assist students in the CSCI 111 and CSCI 211 course in debugging their assignments & demonstrating debugging
-            methods in C++. Tutor introductory programming fundamentals with students in C++, such as pass-by-reference
+            Assist students in the CSCI 111 and CSCI 211 course in debugging their assignments &
+            demonstrating debugging
+            methods in C++. Tutor introductory programming fundamentals with students in C++, such as
+            pass-by-reference
             vs. pass-by-value and variable scope and object-oriented programming
           </p>
         </div>
       </section>
+
+      <span id="work-history-models" class="model"></span>
+
       <br>
 
       <section class="section_area" id="education">
@@ -174,21 +213,30 @@
         </div>
       </section>
 
+      <!-- <span id="education-models" class="model"></span> -->
+
+      <span id="grad-image-container">
+        <img src="images/grad.jpg" id="grad-image">
+      </span>
+
       <section class="section_area" id="contact">
         <h2 class="section_header"> Contact Info </h2>
         <div class="section_item" id="contact-links-container">
-        <ul class="contact-list">
-          <li class="contact-item">
-            <a class="contact-link" href="https://github.com/jdmacam" target="_blank"><img class="contact-image" src="images/github.png"></a>
-          </li>
-          <li class="contact-item">
-            <a class="contact-link"  href="https://www.linkedin.com/in/jdmacam/" target="_blank"><img class="contact-image" src="images/linkedin.png"></a>
-          </li>
-          <li class="contact-item">
-            <a class="contact-link"  href="resume.pdf" target="_blank"><img class="contact-image" src="images/resume.png"></a>
-          </li>
-        </ul>
-      </div>
+          <ul class="contact-list">
+            <li class="contact-item">
+              <a class="contact-link" href="https://github.com/jdmacam" target="_blank"><img class="contact-image"
+                  src="images/github.png"></a>
+            </li>
+            <li class="contact-item">
+              <a class="contact-link" href="https://www.linkedin.com/in/jdmacam/" target="_blank"><img
+                  class="contact-image" src="images/linkedin.png"></a>
+            </li>
+            <li class="contact-item">
+              <a class="contact-link" href="resume.pdf" target="_blank"><img class="contact-image"
+                  src="images/resume.png"></a>
+            </li>
+          </ul>
+        </div>
 
       </section>
 
