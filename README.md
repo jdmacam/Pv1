@@ -8,6 +8,7 @@ This website is by no means a work of art, and there are still quite a few impro
   - [VSCode](https://code.visualstudio.com/)
   - [JavaScript](https://www.javascript.com/)
   - [Node.js](https://nodejs.org/en/)
+  - [npm](https://www.npmjs.com/)
   - [Three.js](https://threejs.org/) for 3D rendering graphics
   - [Vite](https://vitejs.dev/) development build tool
   - [Github Pages](https://pages.github.com/) for hosting
