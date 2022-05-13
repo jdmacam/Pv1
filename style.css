@@ -2,6 +2,10 @@
   font-family: Orbitron;
   src: url(fonts/Orbitron-Bold.ttf);
 }
+@font-face {
+  font-family: Consolas;
+  src: url(fonts/Consolas.ttf);
+}
 
 /* mobile resolution changes */
 @media only screen and (max-width: 600px) {
@@ -17,7 +21,11 @@
   }
   header{
     grid-column: 2/12 !important;
-    margin-top: 40% !important;
+    /* margin-top: 40% !important; */
+    top: % !important;
+  }
+  .name-title{
+    top: 0% !important;
   }
   #aboutme {
     grid-column: 2/12 !important;
@@ -67,9 +75,10 @@
 }
 
 html {
-  font-family:Arial, Helvetica, sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.03rem;
+  /* /* font-family:Arial, Helvetica, sans-serif; */
+  font-family: Consolas;
+  /* font-weight: 700; */
+  /* letter-spacing: 0.03rem; */
   background-color: #1B2631;
 }
 
@@ -131,7 +140,7 @@ header{
   color: white;
   background-color: rgb(30,144,255,0.9);
   background: linear-gradient(0deg, rgb(30, 188, 245) 0%, rgba(30,118,255,1) 100%);
-  grid-column: 2/8;
+  grid-column: 2/12;
   text-align: center;
   margin-top: 10%;
   padding: 5%;
@@ -140,10 +149,16 @@ header{
 #the_boi{
   font-family: Orbitron;
   font-size: 60px;
-  color: black;
+  /* color: black; */
   text-decoration: underline;
+  text-decoration-thickness: 5px;
   letter-spacing: .1rem;
   word-spacing: .2rem;
+}
+.name-title{
+  position: relative;
+  float: left;
+  top: 25%;
 }
 
 #portrait-image-container{
@@ -158,13 +173,14 @@ header{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 25%;
+  padding-top: 0%;
+  border-radius: 30px;
 
   max-width: 35rem;
 }
 
 #aboutme {
-  grid-column: 2/8;
+  grid-column: 2/12;
 }
 #aboutme_content{
   margin-bottom: 1rem;
@@ -204,7 +220,7 @@ section{
 }
 
 #projects {
-  grid-column: 2/8;
+  grid-column: 2/12;
 }
 #work_history {
   grid-column: 2/8;
