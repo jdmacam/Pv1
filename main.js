@@ -85,8 +85,8 @@ function main() {
 			model.traverse(function (node) {
 				if (node.isMesh) { node.castShadow = true; }
 			});
-			model.scale.set(.5,.5,.5);
-			model.position.set(0,-.65,0);
+			model.scale.set(.4,.4,.4);
+			model.position.set(0,-.5,0);
 			const gundamPosition = model.position;
 			// console.log(model.position);
 			sceneInfo.scene.add(model);
