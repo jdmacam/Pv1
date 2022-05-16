@@ -90,6 +90,7 @@ canvas {
   width: 100%;
   height: 100%;
   z-index: -1;
+  /* background-image: url('images/babby.jpg'); */
 }
 
 /* 2nd column grid */
@@ -220,7 +221,7 @@ section{
 }
 
 #projects {
-  grid-column: 2/12;
+  grid-column: 2/8;
 }
 #work_history {
   grid-column: 2/8;
