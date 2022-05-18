@@ -1,5 +1,5 @@
 # Personal Website
-## https://jdmacam.github.io/portfolio-site/
+## https://jdmacam.github.io/website/
 
 Hi there! Thanks for visiting the repository for my website! This is my first time creating my own personal website to advertise myself, and also the first time creating a website using Vanilla JavaScript, Node.js, and Three.js (My previous experience has been with Django and Python).
 
